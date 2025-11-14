@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
 }
 
-/* Header */
+/* Header - Made fixed */
 .site-header {
     display: flex;
     align-items: center;
@@ -75,9 +75,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1rem;
     background-color: #f6f6f8;
     backdrop-filter: blur(4px);
-    position: sticky;
+    position: fixed; /* Changed from sticky to fixed */
     top: 0;
-    z-index: 50;
+    left: 0;
+    right: 0;
+    z-index:100;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -145,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation - Reduced height of navlinks */
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -159,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav.active {
-    height: 100vh;
+    height: 50vh;
 }
 
 .mobile-nav-links {
@@ -168,17 +171,17 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: 2rem;
+    gap: 1rem; /* Reduced from 2rem to 1rem */
     padding: 2rem;
 }
 
 .mobile-nav-link {
-    font-size: 1.25rem;
+    font-size: 1.1rem; /* Slightly reduced font size */
     font-weight: 500;
     color: #2C3E50;
     text-decoration: none;
     transition: all 0.2s ease;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.25rem; /* Reduced padding */
     border-radius: 0.5rem;
     width: 100%;
     max-width: 200px;
@@ -210,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.015em;
     text-decoration: none;
     transition: all 0.2s ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem; /* Reduced margin */
 }
 
 .mobile-book-button:hover {
@@ -282,8 +285,9 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-/* Hero Section */
+/* Hero Section - Added space for fixed header */
 .hero-section {
+    margin-top: 4.5rem; /* Added space to account for fixed header */
     margin-bottom: 3rem;
 }
 
